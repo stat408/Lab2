@@ -14,6 +14,7 @@ Answer the following questions in this R Markdown document. Please include code 
 
 ### 1. Factors driving housing prices.
 Download the Seattle Housing dataset, available at: [http://math.montana.edu/ahoegh/teaching/stat408/datasets/SeattleHousing.csv](http://math.montana.edu/ahoegh/teaching/stat408/datasets/SeattleHousing.csv).
+
 ```{r read.data}
 #read.csv( )
 ```
@@ -27,6 +28,7 @@ Select a few features in the data set that youthink are relevant for determining
 
 #### c. (4 points)
 Using base R plots, create two figures with at least one showing the relationship between a two variable in the data set with the housing price.
+
 ```{r fig, echo=TRUE}
 #plot()
 ```
