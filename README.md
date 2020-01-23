@@ -24,7 +24,7 @@ What format are the following vectors in the housing dataset: price, bedrooms, b
 Select a few features in the data set that youthink are relevant for determining housing prices. How might each of these influence housing prices?
 
 #### c. (4 points)
-Using base R plots, create two figures with at least one showing the relationship between a two variable in the data set with the housing price.
+Using base R plots, create two figures with at least one showing the relationship between a variable in the data set with the housing price.
 
 
 #### d. (4 points)
