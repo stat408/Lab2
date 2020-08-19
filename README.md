@@ -4,40 +4,49 @@ Turn in one copy for each group, both as a word or PDF document and the R Markdo
 
 ## Lab Overview
 
-This lab will revist the Seattle housing dataset. The intent of this lab is to get a feel for some of the basic features in R and explore this data set. Some of the questions will be repeated from Lab 1, but are to be completed without using the tidyverse.
+This lab will explore a dataset containing Paycheck Protection Program (PPP) loans issued in the state of Montana with total loan amounts greater that $150,000. The data was acquired via [kaggle.com](https://www.kaggle.com/susuwatari/ppp-loan-data-paycheck-protection-program). The source data can also be found at on the Department of the Treasury [Website](https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data).
 
-The entire lab will be worth 20 points. Please consider clarity of code and thoughtful writing with an emphasis on concise interpretations as each will be considered when grading labs.
+The entire lab will be worth 20 points.
 
 ## Questions
 Answer the following questions in this R Markdown document. Please include code where necessary.
 
 
-### 1. Factors driving housing prices.
-Download the Seattle Housing dataset, available at: [http://math.montana.edu/ahoegh/teaching/stat408/datasets/SeattleHousing.csv](http://math.montana.edu/ahoegh/teaching/stat408/datasets/SeattleHousing.csv).
+### 1. Download Data (2 points)
+Download the dataset, which has been filtered to only include businesses in Montana. The data is available at [https://raw.githubusercontent.com/stat408/Lab2/master/MT_PPP.csv](https://raw.githubusercontent.com/stat408/Lab2/master/MT_PPP.csv).
+
+### 2. Data Description (2 points)
+
+Summarize the dataset. In particular focus on:
+
+- How many businesses are in the dataset?
+- What attributes are collected for each business?
 
 
-
-#### a. (2 points)
-What format are the following vectors in the housing dataset: price, bedrooms, bathrooms?
-
-#### b. (2 points)
-Select a few features in the data set that youthink are relevant for determining housing prices. How might each of these influence housing prices?
-
-#### c. (4 points)
-Using base R plots, create two figures with at least one showing the relationship between a variable in the data set with the housing price.
+### 3. Total Jobs Retained (2 points)
+According to the data, how many total jobs were "retained?"
 
 
-#### d. (4 points)
-Summarize the take away points from your figures. These summaries should be 3-4 sentences and provide all of the context for your graphics so that an outside observer could understand the story you are illustrating.
+### 4. Maximum Jobs Retained (2 points)
 
+What are the maximum number of jobs retained by a single business?
 
-#### e. (4 points)
-Choose a variable or set of variables and create a subset of homes from the entire the dataset. For example, consider homes with greater than 3 bedrooms. Then describe the differences between your selected subset of homes and the entire data set. You can do this with numerical summaries, graphical displays, and/or qualitative descriptions. 
+### 5. Bozeman Jobs Retained (2 points)
 
-### 2. Modeling Housing Prices
+How many jobs were retained for businesses based in Bozeman?
 
-#### a. (2 points)
-Based on what you have found in this data set, how might you model housing prices ($Y_{price} = ?$)? Note, I am not asking you to fit a model, but rather describe important relationships between the variables and housing prices. You may discuss statistical modeling techniques, but we will cover these later in the course.
+### 6. Count by Business Type (2 points)
 
-#### b. (2 points)
-Suppose you have developed a model to predict housing prices in the King County area, how could these results be applied to the Bozeman housing market?
+How many businesses of each business type received loans?
+
+### 7. Count by City (2 points)
+
+Which 5 cities have the most loans?
+
+### 8. Maximum Jobs Retained (2 points)
+
+Which business(es) claimed the maximum number of jobs retained?
+
+### 9. Data Visualization (4 points)
+
+Create a data visualization using `ggplot2` that summarizes some aspect of this dataset.
