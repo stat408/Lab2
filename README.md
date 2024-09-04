@@ -1,52 +1,52 @@
-# Lab2
+## Lab 2 Overview
 
-Turn in one copy for each group, both as a word or PDF document and the R Markdown source file.
-
-## Lab Overview
-
-This lab will explore a dataset containing Paycheck Protection Program (PPP) loans issued in the state of Montana with total loan amounts greater that $150,000. The data was acquired via [kaggle.com](https://www.kaggle.com/susuwatari/ppp-loan-data-paycheck-protection-program). The source data can also be found at on the Department of the Treasury [Website](https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data).
-
-The entire lab will be worth 20 points.
-
-## Questions
-Answer the following questions in this R Markdown document. Please include code where necessary.
+The entire lab will be worth 20 points. 
 
 
-### 1. Download Data (2 points)
-Download the dataset, which has been filtered to only include businesses in Montana. The data is available at [https://raw.githubusercontent.com/stat408/Lab2/master/MT_PPP.csv](https://raw.githubusercontent.com/stat408/Lab2/master/MT_PPP.csv).
+### 1. R Style and debugging (10 points)
+The code and output below are designed to create a figure from the titantic dataset. Update the code - so it works- follow the style guide and comment your code.
 
-### 2. Data Description (2 points)
+Please include a bullet point summary of what you changed and why. Note this first code chunk has the option `eval = F` which means it is not currently evaluated.
 
-Summarize the dataset. In particular focus on:
+```{r, eval = F, message = F}
+THEDATA=read_csv(http://math.montana.edu/ahoegh/teaching/stat408/datasets/titanic.csv)
 
-- How many businesses are in the dataset?
-- What attributes are collected for each business?
+titanic 
+  %>% filter(!is.na(Age)) %>% # removed passengers without age
+  mutate(Pclass = factor(Pclass)) %>% # changed class to factor
+  ggplot(y = Age, x = Pclass)) %>%
+  geom_boxplot(outlier.shape = NA) %>%
+  geom_jitter(color = Sex) +
+  theme_bw() + 
+  xlab(Passenger Class) +
+  ggtitle('Passenger age by class and gender on Titanic') +
+  facet_wrap(Sex~.)
+```
 
 
-### 3. Total Jobs Retained (2 points)
-According to the data, how many total jobs were "retained?"
+### 2. Data Structures / Subsetting (5 points)
+
+Use in line R code to answer these questions with complete sentences. As an example you can call r variables using backticks, then r, then your r command. For example to print the current time, we can use `Sys.time()` so that it is currently `r Sys.time()`.
+
+### a. 
+How old is the 747th passenger in the dataset?
+
+### b. 
+How old is the oldest passenger in the dataset?
+
+### c.
+
+Who is the oldest passenger in the dataset?
 
 
-### 4. Maximum Jobs Retained (2 points)
+### d. 
+What percentage of 3rd class males survived (Leonardo DiCaprio as Jack)?
 
-What are the maximum number of jobs retained by a single business?
 
-### 5. Bozeman Jobs Retained (2 points)
+### e. 
+What percentage of 1st class females survived (Kate Winslet as Rose).
 
-How many jobs were retained for businesses based in Bozeman?
+### 3. Writing data out of R (5 points)
 
-### 6. Count by Business Type (2 points)
+We've seen how to use the `tibble()` function to create a dataframe. Another option is `tribble()` which allows us to specify the rows, rather than columns. See the documentation for `tribble()` [https://tibble.tidyverse.org/reference/tribble.html](https://tibble.tidyverse.org/reference/tribble.html) and create a tibble with three columns and as many rows as you have group members. The first column contains the names of the group members, the second contains the group member's hometown, and the final contains the group member's favorite season. Print out this data frame.
 
-How many businesses of each business type received loans?
-
-### 7. Count by City (2 points)
-
-Which 5 cities have the most loans?
-
-### 8. Maximum Jobs Retained (2 points)
-
-Which business(es) claimed the maximum number of jobs retained?
-
-### 9. Data Visualization (4 points)
-
-Create a data visualization using `ggplot2` that summarizes some aspect of this dataset.
