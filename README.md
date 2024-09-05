@@ -48,5 +48,5 @@ What percentage of 1st class females survived (Kate Winslet as Rose).
 
 ### 3. Writing data out of R (5 points)
 
-We've seen how to use the `tibble()` function to create a dataframe. Another option is `tribble()` which allows us to specify the rows, rather than columns. See the documentation for `tribble()` [https://tibble.tidyverse.org/reference/tribble.html](https://tibble.tidyverse.org/reference/tribble.html) and create a tibble with three columns and as many rows as you have group members. The first column contains the names of the group members, the second contains the group member's hometown, and the final contains the group member's favorite season. Print out this data frame.
+We've seen how to use the `tibble()` function to create a dataframe. Another option is `tribble()` which allows us to specify the rows, rather than columns. See the documentation for `tribble()` [https://tibble.tidyverse.org/reference/tribble.html](https://tibble.tidyverse.org/reference/tribble.html) and create a tibble with three columns and as many rows as you have group members. The first column contains the names of the group members, the second contains the group member's hometown, and the final contains the group member's favorite season. Print out this data frame and write out a file (either CSV or XLS(X).
 
